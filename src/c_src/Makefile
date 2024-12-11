@@ -14,7 +14,7 @@ MKDIR             := mkdir -p
 FPIC              := -fPIC
 FOLDER            := ../../lib/
 
-SDL_FLAG          := -lSDL2
+SDL_FLAG          := $(shell pkg-config --cflags --libs sdl2)
 SDL_IMG_FLAG      := $(SDL_FLAG) -lSDL2_image
 SDL_GFX_FLAG      := $(SDL_FLAG) -lSDL2_gfx
 SDL_TTF_FLAG      := $(SDL_FLAG) -lSDL2_ttf
